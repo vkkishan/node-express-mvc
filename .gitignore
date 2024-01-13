@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Environment varibales
+.env
+
+# Image folder
+uploads/*
+!uploads/default
+
+package-lock.json
