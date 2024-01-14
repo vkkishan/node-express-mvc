@@ -4,10 +4,9 @@ const { userController } = require("../controller/index");
 const { auth } = require("../middleware/auth");
 const { userValidation } = require("../validation");
 const { validator } = require("../middleware/validation");
-// const au th = require("../middleware/auth");
 
 routes.post(
-  "/register",
+  "/register/:name",
   validator(userValidation.register),
   userController.register
 );
