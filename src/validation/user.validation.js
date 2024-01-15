@@ -6,8 +6,8 @@ const register = {
     password: joi.string().trim(),
     role: joi.string().trim().required().valid("user", "admin", "subadmin"),
   }),
-  parmas: joi.object().keys({
-    name : joi.string().trim().required(),
+  params: joi.object().keys({
+    name: joi.number().required(),
   }),
 };
 

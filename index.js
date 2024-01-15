@@ -16,6 +16,11 @@ app.use(express.static("./"));
 app.use("/", userRoute);
 app.use("/product", productRoute);
 
+// send back a 404 error for any unknown api request
+app.use((req, res, next) => {
+  next(res.status(404).json({ message: "Route not found" }));
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`=====> server_connected ${process.env.PORT} <=====`);
 });
